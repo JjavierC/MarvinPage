@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarvinVIP - Autenticación</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f172a] text-white min-h-screen flex items-center justify-center px-4">
+
+<div id="contenedor" class="w-full max-w-md bg-gradient-to-br from-black to-purple-800 p-8 rounded-2xl shadow-xl transition-colors duration-500">
+    <h2 class="text-2xl font-bold text-center mb-6 text-white-1000">Bienvenido a MarvinVIP Preparate para tu gran cambio</h2>
+
+    <div class="flex justify-between gap-4 mb-6">
+      <button id="btn-registrarse" class="w-1/2 bg-gradient-to-r from-purple-600 to-pink-500 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+        Registrarse
+      </button>
+      <button id="btn-login" class="w-1/2 bg-gradient-to-r from-purple-600 to-pink-500 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+        Iniciar sesión
+      </button>
+    </div>
+
+    <!-- Formulario de registro -->
+    <form id="form-registro" class="space-y-4 hidden">
+      <input type="email" id="registro-email" placeholder="Correo electrónico"
+        class="w-full p-3 bg-gray-800 text-white rounded-lg placeholder-gray-400" required />
+      <input type="password" id="registro-password" placeholder="Contraseña"
+        class="w-full p-3 bg-gray-800 text-white rounded-lg placeholder-gray-400" required />
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 rounded-lg font-bold hover:opacity-90">
+        Crear cuenta
+      </button>
+    </form>
+
+    <!-- Formulario de inicio de sesión -->
+    <form id="form-login" class="space-y-4 hidden">
+      <input type="email" id="login-email" placeholder="Correo electrónico"
+        class="w-full p-3 bg-gray-800 text-white rounded-lg placeholder-gray-400" required />
+      <input type="password" id="login-password" placeholder="Contraseña"
+        class="w-full p-3 bg-gray-800 text-white rounded-lg placeholder-gray-400" required />
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-pink-500 to-purple-600 py-3 rounded-lg font-bold hover:opacity-90">
+        Iniciar sesión
+      </button>
+    </form>
+
+    <button id="google-login"
+      class="mt-6 w-full bg-white text-black py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+      Iniciar con Google
+    </button>
+
+    <p id="mensaje" class="text-center text-sm mt-4"></p>
+  </div>
+
+  <!-- Firebase y lógica externa -->
+  <script type="module" src="logica.js"></script>
+</body>
+</html>
